@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="3" ignored="2" total="9" passed="4">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="5489" started-at="2022-05-19T23:54:49 IST" finished-at="2022-05-19T23:54:54 IST">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="5489" started-at="2022-05-19T23:54:49 IST" finished-at="2022-05-19T23:54:54 IST">
+      <class name="com.albertsons.APITestingFramework.testcases.CreateCustomerTest">
+        <test-method status="PASS" signature="validateCreateCustomerApiWithInvalidSecretKey(java.util.Hashtable)[pri:0, instance:com.albertsons.APITestingFramework.testcases.CreateCustomerTest@6283d8b8]" name="validateCreateCustomerApiWithInvalidSecretKey" duration-ms="747" started-at="2022-05-19T23:54:53 IST" data-provider="data" finished-at="2022-05-19T23:54:53 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{email=barik.pradyumn0@gmail.com, name=pradyumn, description=this is the first api}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateCreateCustomerApiWithInvalidSecretKey -->
+        <test-method status="PASS" signature="validateCreateCustomerApiWithValidSecretKey(java.util.Hashtable)[pri:0, instance:com.albertsons.APITestingFramework.testcases.CreateCustomerTest@6283d8b8]" name="validateCreateCustomerApiWithValidSecretKey" duration-ms="827" started-at="2022-05-19T23:54:53 IST" data-provider="data" finished-at="2022-05-19T23:54:54 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{email=swati.sinha@gmail.com, name=swati, description=this is the third api}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateCreateCustomerApiWithValidSecretKey -->
+        <test-method status="PASS" signature="validateCreateCustomerApiWithValidSecretKey(java.util.Hashtable)[pri:0, instance:com.albertsons.APITestingFramework.testcases.CreateCustomerTest@6283d8b8]" name="validateCreateCustomerApiWithValidSecretKey" duration-ms="872" started-at="2022-05-19T23:54:53 IST" data-provider="data" finished-at="2022-05-19T23:54:54 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{email=barik.pradyumn0@gmail.com, name=pradyumn, description=this is the first api}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateCreateCustomerApiWithValidSecretKey -->
+        <test-method status="PASS" signature="validateCreateCustomerApiWithValidSecretKey(java.util.Hashtable)[pri:0, instance:com.albertsons.APITestingFramework.testcases.CreateCustomerTest@6283d8b8]" name="validateCreateCustomerApiWithValidSecretKey" duration-ms="861" started-at="2022-05-19T23:54:53 IST" data-provider="data" finished-at="2022-05-19T23:54:54 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{email=kanha.prusti@gmail.com, name=kanha, description=this is the second api}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateCreateCustomerApiWithValidSecretKey -->
+      </class> <!-- com.albertsons.APITestingFramework.testcases.CreateCustomerTest -->
+      <class name="com.albertsons.APITestingFramework.testcases.DeleteCustomerTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.albertsons.APITestingFramework.testcases.DeleteCustomerTest@20ccf40b]" name="setUp" is-config="true" duration-ms="791" started-at="2022-05-19T23:54:48 IST" finished-at="2022-05-19T23:54:49 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="FAIL" signature="deleteCustomer(java.util.Hashtable)[pri:0, instance:com.albertsons.APITestingFramework.testcases.DeleteCustomerTest@20ccf40b]" name="deleteCustomer" duration-ms="3733" started-at="2022-05-19T23:54:49 IST" data-provider="data" finished-at="2022-05-19T23:54:53 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{id=cus_Lif1DhRXWwRUpg}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[id key is not present in json response expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: id key is not present in json response expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertTrue(Assert.java:45)
+at com.albertsons.APITestingFramework.testcases.DeleteCustomerTest.deleteCustomer(DeleteCustomerTest.java:35)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:77)
+at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:15)
+at java.util.concurrent.FutureTask.run(Unknown Source)
+at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+at java.util.concurrent.FutureTask.run(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteCustomer -->
+        <test-method status="FAIL" signature="deleteCustomer(java.util.Hashtable)[pri:0, instance:com.albertsons.APITestingFramework.testcases.DeleteCustomerTest@20ccf40b]" name="deleteCustomer" duration-ms="3733" started-at="2022-05-19T23:54:49 IST" data-provider="data" finished-at="2022-05-19T23:54:53 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{id=cus_Lif1CTBNFigZ9q}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[id key is not present in json response expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: id key is not present in json response expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertTrue(Assert.java:45)
+at com.albertsons.APITestingFramework.testcases.DeleteCustomerTest.deleteCustomer(DeleteCustomerTest.java:35)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:77)
+at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:15)
+at java.util.concurrent.FutureTask.run(Unknown Source)
+at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+at java.util.concurrent.FutureTask.run(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteCustomer -->
+        <test-method status="FAIL" signature="deleteCustomer(java.util.Hashtable)[pri:0, instance:com.albertsons.APITestingFramework.testcases.DeleteCustomerTest@20ccf40b]" name="deleteCustomer" duration-ms="3733" started-at="2022-05-19T23:54:49 IST" data-provider="data" finished-at="2022-05-19T23:54:53 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{id=cus_Lif1EAxBptEmSw}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[id key is not present in json response expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: id key is not present in json response expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertTrue(Assert.java:45)
+at com.albertsons.APITestingFramework.testcases.DeleteCustomerTest.deleteCustomer(DeleteCustomerTest.java:35)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:77)
+at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:15)
+at java.util.concurrent.FutureTask.run(Unknown Source)
+at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+at java.util.concurrent.FutureTask.run(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteCustomer -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.albertsons.APITestingFramework.testcases.DeleteCustomerTest@20ccf40b]" name="tearDown" is-config="true" duration-ms="1" started-at="2022-05-19T23:54:55 IST" finished-at="2022-05-19T23:54:55 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.albertsons.APITestingFramework.testcases.DeleteCustomerTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
