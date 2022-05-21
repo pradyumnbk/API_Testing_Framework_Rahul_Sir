@@ -1,12 +1,21 @@
 package com.albertsons.TestListners;
 
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 import java.util.Arrays;
 import java.util.Date;
 
+import javax.mail.MessagingException;
+import javax.mail.internet.AddressException;
+
+import org.testng.ISuite;
+import org.testng.ISuiteListener;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
+import com.albertsons.apitesting.utilities.TestConfig;
+import com.albertsons.mail_api.MonitoringMail;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
@@ -17,7 +26,7 @@ import com.aventstack.extentreports.markuputils.MarkupHelper;
 
 
 
-public class ExtentListeners implements ITestListener {
+public class ExtentListeners implements ITestListener,ISuiteListener {
 
 	static Date d = new Date();
 	static String fileName = "Extent_" + d.toString().replace(":", "_").replace(" ", "_") + ".html";
@@ -25,7 +34,7 @@ public class ExtentListeners implements ITestListener {
 	private static ExtentReports extent = ExtentManager.createInstance(System.getProperty("user.dir")+"\\reports\\"+fileName);
 	
 	public static ThreadLocal<ExtentTest> testReport = new ThreadLocal<ExtentTest>();
-	
+	static String messageBody;
 
 	public void onTestStart(ITestResult result) {
 
@@ -96,6 +105,26 @@ public class ExtentListeners implements ITestListener {
 		if (extent != null) {
 
 			extent.flush();
+		}
+
+	}
+	
+	public void onFinish(ISuite suite) {
+		MonitoringMail mail=new MonitoringMail();
+		try {
+			messageBody = "http://"+InetAddress.getLocalHost().getHostAddress()+":8080/job/API_Testing_Framework/Extent_20Reports/"+fileName;
+		} catch (UnknownHostException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		try {
+			mail.sendMail(TestConfig.server, TestConfig.from, TestConfig.to, TestConfig.subject,messageBody);
+		} catch (AddressException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (MessagingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 
 	}
