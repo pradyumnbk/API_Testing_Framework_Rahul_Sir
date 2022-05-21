@@ -12,7 +12,7 @@ public class DataUtils extends BaseTest {
 	 * In excel reader class the logic is set like rows start with 1 and column will
 	 * start with 0
 	 */
-	@DataProvider(name = "data",parallel = true)//parallel=true will run all the testdata parallel
+	@DataProvider(name = "data")//parallel=true will run all the testdata parallel
 	public Object[][] getData(Method m) {
 		int rows = reader.getRowCount(prop.getProperty("TestDataSheetName"));
 		System.out.println("Total rows are : " + rows);
