@@ -15,7 +15,11 @@ public class DeleteCustomerApi extends BaseTest{
 				.auth()
 				.basic(prop.getProperty("ValidSecretKey"), "")
 				.when()
-				.delete(prop.getProperty("CustomerApiEndpoint")+"/"+data.get("id"));
+				.delete(prop.getProperty("CustomerApiEndpoint")+"/"+data.get("id"))
+				.then()
+				.log().all()
+				.extract()
+				.response();
 		return response;
 	}
 

@@ -3,14 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.albertsons.APITestingFramework.testcases.CreateCustomerTest">
+      <class name="com.albertsons.APITestingFramework.testcases.DeleteCustomerTest">
         <methods>
-          <include name="validateCreateCustomerApiWithInvalidSecretKey"/>
-          <include name="validateCreateCustomerApiWithValidSecretKey"/>
+          <include name="deleteCustomer" invocation-numbers="1 0 4 5 7 8 2 9 6 3 19 16 11 13 14 15 10 12 18 17 21 20 23 22"/>
           <include name="setUp"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- com.albertsons.APITestingFramework.testcases.CreateCustomerTest -->
+      </class> <!-- com.albertsons.APITestingFramework.testcases.DeleteCustomerTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
